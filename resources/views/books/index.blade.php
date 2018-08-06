@@ -10,6 +10,8 @@
                 @include('books.book')
             @endforeach
 
+                {{ $books->links() }}
+
         </div>
 
     </main>

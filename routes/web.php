@@ -13,7 +13,9 @@
 
 Route::get('/', 'BookController@index')->name('home');
 
-Route::get('/books/create', 'BookController@create');
+Route::get('/books/create', 'BookController@create')
+    ->middleware('is_admin')
+    ->name('admin');
 
 Route::post('/books', 'BookController@store');
 

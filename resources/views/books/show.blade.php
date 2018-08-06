@@ -21,8 +21,7 @@
 
                 <li class="list-group-item" style="background:black;">
                     <strong>
-
-                        {{$comment->created_at->diffForHumans()}} : &nbsp;
+                        {{ $book->user->name }} on {{$comment->created_at->diffForHumans()}} : &nbsp;
 
                     </strong>
 

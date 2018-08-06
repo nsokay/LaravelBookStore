@@ -21,7 +21,8 @@ Route::post('/books', 'BookController@store');
 
 Route::get('/books/{book}', 'BookController@show');
 
-Route::post('/books/{book}/comments', 'CommentsController@store');
+Route::post('/books/{book}/comments', 'CommentsController@store')
+    ->middleware('auth');;
 
 
 Route::get('/register', 'RegistrationController@create');
@@ -29,7 +30,7 @@ Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
 
-Route::get('/login', 'SessionController@create');
+Route::get('/login', 'SessionController@create')->name('login');;
 
 Route::post('/login', 'SessionController@store');
 
